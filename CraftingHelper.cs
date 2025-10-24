@@ -47,8 +47,7 @@ public class CraftingHelper
                     {
                         if (requiredItem == 0) continue;
                         int count = CountInAllStorages(x => x.ItemId == requiredItem);
-                        if (count > totalAmount)
-                            totalAmount = count;
+                        totalAmount +=count;
                     }
                     break;
             }

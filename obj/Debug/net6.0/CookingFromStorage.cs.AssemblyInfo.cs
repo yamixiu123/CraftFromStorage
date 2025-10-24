@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("My first plugin")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b19210e9b4609987f446f160d5ac558a07538049")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fc78360118c9e42a2f698f6a29f085f62555a5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CraftFromStorage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CraftFromStorage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
