@@ -46,9 +46,10 @@ public class CraftingHelper
                     foreach (var requiredItem in groupData.RequiredItemIdList)
                     {
                         if (requiredItem == 0) continue;
-                        totalAmount = CountInAllStorages(x => x.ItemId == requiredItem);
+                        int count = CountInAllStorages(x => x.ItemId == requiredItem);
+                        if (count > totalAmount)
+                            totalAmount = count;
                     }
-
                     break;
             }
 

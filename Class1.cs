@@ -42,7 +42,6 @@ public class CraftFromStorage : BasePlugin
             if (cookingItemSelector.transform.GetChild(2).GetChild(0).GetChild(0).FindChild("HaveStorageStackBG") !=
                 null) return;
 
-            //TODO: cooking is different from windmill so need to adjust accordingly
             var rectangle = cookingItemSelector.GetComponent<RectTransform>();
             rectangle.sizeDelta = new Vector2(rectangle.sizeDelta.x, rectangle.sizeDelta.y + 90);
             cookingItemSelector.transform.position += new Vector3(0, 0.07f, 0);
@@ -132,6 +131,21 @@ public class CraftFromStorage : BasePlugin
         [HarmonyPatch(typeof(RequiredItemMaster), "IsEnough")]
         [HarmonyPostfix]
         public static void PatchRecipeMask(BokuMono.StorageManager __0,
+            BokuMono.Data.IRequiredItemMasterData __1,
+            int countOffset, ref bool __result)
+        {
+            if (__result) return; // if already true no real need to check
+
+            __result = CraftingHelper.IsCraftable(__1);
+        }
+
+        /*
+         * This patch makes the recipe icons to be craftable if the items are in storage
+         * Does not allow crafting from storage yet, just makes the icon highlighted and clickable
+         */
+        [HarmonyPatch(typeof(RequiredItemMaster), "IsEnough")]
+        [HarmonyPostfix]
+        public static void PatchCookingRecipeMask(BokuMono.StorageManager __0,
             BokuMono.Data.IRequiredItemMasterData __1,
             int countOffset, ref bool __result)
         {

@@ -146,3 +146,4 @@ C:\Users\kurok\source\repos\CookingFromStorage.cs\CookingFromStorage.cs\obj\Debu
 C:\Users\kurok\source\repos\CookingFromStorage.cs\CookingFromStorage.cs\obj\Debug\net6.0\refint\CraftFromStorage.dll
 C:\Users\kurok\source\repos\CookingFromStorage.cs\CookingFromStorage.cs\obj\Debug\net6.0\CraftFromStorage.pdb
 C:\Users\kurok\source\repos\CookingFromStorage.cs\CookingFromStorage.cs\obj\Debug\net6.0\ref\CraftFromStorage.dll
+C:\Users\kurok\source\repos\CookingFromStorage.cs\CookingFromStorage.cs\obj\Debug\net6.0\CookingFromStorage.cs.sourcelink.json
